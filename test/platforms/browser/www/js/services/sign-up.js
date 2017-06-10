@@ -5,12 +5,10 @@ app.service("signUp", function(Settings, $q, $http) {
             method: 'POST',
             url: Settings.BASE_URL + "/user/signUp",
             data: {
-                user_first_name: user.fname,
-                user_last_name: user.lname,
-                user_phone: user.Mobile,
+                user_name: user.name,
                 user_email: user.email,
                 user_password: user.password,
-                apartment_id: user.aptno
+                apartment_id: user.apartment
             },
             headers: {
                 'Content-Type': 'application/json'
@@ -29,6 +27,6 @@ app.service("signUp", function(Settings, $q, $http) {
         return deferred.promise;
     };
     return {
-        singIn: singIn
+        signUp: signUp
     }
 });

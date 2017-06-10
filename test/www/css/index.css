@@ -22,20 +22,23 @@
     /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:white;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
+<<<<<<< Updated upstream body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: white;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
-
+=======>>>>>>>Stashed changes
 /* Portrait layout (default) */
 
 .app {
@@ -68,7 +71,6 @@ body {
         /* offset horizontal: half of image width and text area width */
     }
 }
-
 
 .event {
     border-radius: 4px;
@@ -123,34 +125,44 @@ body {
     top: 30%;
     left: 40%;
 }
-.login{
+
+.login {
     color: black;
     margin-top: 131px;
     padding: 14px;
 }
-.signup{
+
+.signup {
     padding: 63px;
     color: white;
     margin-top: 34px;
     margin-left: 11px;
 }
-.loginbtn .loginbtn:hover, .loginbtn:focus ,.loginbtn:active{
+
+.loginbtn .loginbtn:hover,
+.loginbtn:focus,
+.loginbtn:active {
     background-color: #7b4be2!important;
-    border-color:#7b4be2!important;
+    border-color: #7b4be2!important;
 }
-.btn-danger .btn-danger:hover, .btn-danger:focus ,.btn-danger:active{
-    border-color:#7b4be2!important;
+
+.btn-danger .btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+    border-color: #7b4be2!important;
 }
+
 .form-control.input-style {
     border: none;
     box-shadow: none;
     border-bottom: 1px solid #ccc;
     border-radius: 0;
 }
-.form-control:focus{
+
+.form-control:focus {
     box-shadow: none!important;
     -webkit-box-shadow: none!important;
-    }
+}
 
 h2.hero-text {
     padding: 40px 0px;
@@ -162,6 +174,4 @@ h2.hero-text {
     background-color: #7B4BE2;
     border-color: #7B4BE2;
     border-radius: 2px;
-    padding-top: 10px;
 }
-
