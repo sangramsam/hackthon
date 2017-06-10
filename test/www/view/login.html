@@ -1,13 +1,17 @@
 <div class="login">
-<h2 style="text-align: center">Login</h2>
+<h1 style="color:#FF7373" >Hello there !</h1>
+    <p style="font-size: 18px;color: #9D9D9D">Sign in to discover Coterie </p>
+    <br/>
 <div class="form-group">
-<input type="text" class="form-control" ng-model='da.username' placeholder="Username"
+<input type="text" class="form-control input-style" ng-model='da.username' placeholder="Email">
+</div>
+<div class="form-group">
+<input type="password" class="form-control input-style" ng-model='da.password' placeholder="Password">
+    <p class="pull-right" style="color: #9D9D9D">Forgot password ? </p>
 </div>
 <br/>
-<div class="form-group">
-<input type="password" class="form-control" ng-model='da.password' placeholder="password"
-</div>
-<br/>
-<button class="btn btn-danger btn-lg pull-left" ng-click="submit(da)">Login</button>
-<button class="btn btn-danger btn-lg pull-right" ui-sref="test">cancel</button>
+<button class="btn loginbtn btn-danger btn-lg col-xs-12" style="background-color: #7b4be2" ng-click="submit(da)">Sign In</button>
+    <br/><br/><br/>
+    <p style="text-align: center;
+    font-size: 15px;">Don't have an account ?  <span style="color: #7b4be2!important;">Register here</span></p>
 </div>
