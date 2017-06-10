@@ -4,24 +4,29 @@
     <div class="row" style="margin-left: -29px;margin-right: -29px;">
         <div class="col-xs-6">
             <div class="form-group">
-                <input type="text" class="form-control" ng-model='da.fname' placeholder="Firstname"/>
+                <input type="text" class="form-control" ng-model='userDetails.fname' placeholder="Firstname"/>
             </div>
         </div>
         <div class="col-xs-6">
             <div class="form-group">
-                <input type="text" class="form-control" ng-model='da.lname' placeholder="Lastname"/>
+                <input type="text" class="form-control" ng-model='userDetails.lname' placeholder="Lastname"/>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="form-group">
-            <input type="text" class="form-control" ng-model='da.Mobile' placeholder="Mobile no"/>
+            <input type="text" class="form-control" ng-model='userDetails.Mobile' placeholder="Mobile no"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="password" class="form-control" ng-model='userDetails.password' placeholder="password"/>
         </div>
     </div>
 
     <div class="row">
-        <div class="form-group" ng-model="da.aptno">
-            <select class="form-control">
+        <div class="form-group" >
+            <select class="form-control" ng-model="userDetails.aptno">
                 <option selected>Apprt Name</option>
                 <option value="123">123</option>
                 <option value="123">123</option>
@@ -31,11 +36,11 @@
     </div>
     <div class="row">
         <div class="form-group">
-            <input type="text" class="form-control" ng-model='da.email' placeholder="email id"/>
+            <input type="text" class="form-control" ng-model='userDetails.email' placeholder="email id"/>
         </div>
     </div>
 
     <br/>
-    <button class="btn btn-success btn-lg pull-left" ng-click="submit(da)">Signup</button>
+    <button class="btn btn-success btn-lg pull-left" ng-click="submit(userDetails)">Signup</button>
     <button class="btn btn-danger btn-lg pull-right" ui-sref="test">cancel</button>
 </div>

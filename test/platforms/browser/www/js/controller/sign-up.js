@@ -1,7 +1,10 @@
-app1.controller('signup', function($scope) {
-    $scope.submit=function(da){
-    console.log(da);
-    alert(da.fname +da.lname)
+app.controller('signup', function($scope,$http,Settings,$state,signIn) {
+    $scope.submit=function(userDetails){
+    console.log(userDetails);
+        signIn.singIn(userDetails).then(function (response) {
+            $state.go('home');
+        })
     }
+
 
 });

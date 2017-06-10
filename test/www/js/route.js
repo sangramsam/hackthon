@@ -1,5 +1,5 @@
 
-app1.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
             .state('test', {
                 url: "/test",
@@ -16,6 +16,11 @@ app1.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 title: 'signup',
                 templateUrl: 'view/sign-up.html',
                 controller:'signup'
+            }).state('home', {
+                url: "/home",
+                title: 'home',
+                templateUrl: 'view/home.html',
+                controller:'home'
             })
     $urlRouterProvider.otherwise("/test");
     });

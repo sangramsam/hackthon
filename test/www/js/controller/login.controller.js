@@ -1,4 +1,4 @@
-app1.controller('myCtrl', function($scope) {
+app.controller('myCtrl', function($scope) {
     $scope.submit=function(da){
         console.log(da);
        if(da.username==" " && da.password==""){
