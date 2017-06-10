@@ -1,16 +1,15 @@
-app.service("signUp", function(Settings, $q, $http) {
-    function signUp(user) {
+/**
+ * Created by Geeks on 6/10/2017.
+ */
+app.service("Login", function(Settings, $q, $http) {
+    function Login(user) {
         var deferred = $q.defer();
         $http({
             method: 'POST',
-            url: Settings.BASE_URL + "/user/signUp",
+            url: Settings.BASE_URL + "user/login",
             data: {
-                user_first_name: user.fname,
-                user_last_name: user.lname,
-                user_phone: user.Mobile,
-                user_email: user.email,
-                user_password: user.password,
-                apartment_id: user.aptno
+                user_email:user.email,
+                user_password:user.password
             },
             headers: {
                 'Content-Type': 'application/json'
@@ -29,6 +28,6 @@ app.service("signUp", function(Settings, $q, $http) {
         return deferred.promise;
     };
     return {
-        singIn: singIn
+        Login: Login
     }
 });

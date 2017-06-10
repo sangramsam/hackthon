@@ -3,7 +3,7 @@ app.service("signUp", function(Settings, $q, $http) {
         var deferred = $q.defer();
         $http({
             method: 'POST',
-            url: Settings.BASE_URL + "apartment/user/signUp",
+            url: Settings.BASE_URL + "/user/signUp",
             data: {
                 user_first_name: user.fname,
                 user_last_name: user.lname,

@@ -1,12 +1,12 @@
-app.controller('myCtrl', function($scope) {
-    $scope.submit=function(da){
-        console.log(da);
-       if(da.username==" " && da.password==""){
+app.controller('myCtrl', function($scope,Login,$state) {
+    $scope.submit=function(user){
+        console.log(user);
+       if(user.username=="" && user.password==""){
            alert("field can't be blank !")
-       }else if(da.username==="demo" && da.password=="123"){
-           alert("login success");
        }else{
-           alert("login failed");
+           Login.Login(user).then(function (response) {
+               $state.go('home');
+           })
        }
     }
 
