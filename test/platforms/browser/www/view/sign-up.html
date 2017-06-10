@@ -1,0 +1,41 @@
+<div class="signup">
+    <h2 style="text-align: center">Signup</h2>
+    <br/>
+    <div class="row" style="margin-left: -29px;margin-right: -29px;">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model='da.fname' placeholder="Firstname"/>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model='da.lname' placeholder="Lastname"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model='da.Mobile' placeholder="Mobile no"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group" ng-model="da.aptno">
+            <select class="form-control">
+                <option selected>Apprt Name</option>
+                <option value="123">123</option>
+                <option value="123">123</option>
+                <option value="123">123</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model='da.email' placeholder="email id"/>
+        </div>
+    </div>
+
+    <br/>
+    <button class="btn btn-success btn-lg pull-left" ng-click="submit(da)">Signup</button>
+    <button class="btn btn-danger btn-lg pull-right" ui-sref="test">cancel</button>
+</div>
