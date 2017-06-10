@@ -9,11 +9,8 @@
         </div>
         <div class="form-group">
             <select class="form-control input-style" ng-model="user.apartment">
-            <option selected>Apprt Name</option>
-            <option value="123">Ajmera</option>
-            <option value="123">Salarpuriya</option>
-            <option value="123">Prestige koramangala</option>
-        </select>
+            <option ng-repeat="apartment in apartments" value="{{apartment.apartment_id}}" >{{apartment.apartment_name}}</option>
+            </select>
         </div>
         <div class="form-group">
             <input type="password" class="form-control input-style" ng-model='user.password' placeholder="Password" />
