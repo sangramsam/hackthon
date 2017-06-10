@@ -1,46 +1,23 @@
-<div class="signup">
-    <h2 style="text-align: center">Signup</h2>
-    <br/>
-    <div class="row" style="margin-left: -29px;margin-right: -29px;">
-        <div class="col-xs-6">
-            <div class="form-group">
-                <input type="text" class="form-control" ng-model='userDetails.fname' placeholder="Firstname"/>
-            </div>
-        </div>
-        <div class="col-xs-6">
-            <div class="form-group">
-                <input type="text" class="form-control" ng-model='userDetails.lname' placeholder="Lastname"/>
-            </div>
-        </div>
-    </div>
-    <div class="row">
+<div class="container">
+    <div class="signup">
+        <h2 class="hero-text">New account,</h2>
         <div class="form-group">
-            <input type="text" class="form-control" ng-model='userDetails.Mobile' placeholder="Mobile no"/>
+            <input type="text" class="form-control input-style" ng-model='userDetails.Mobile' placeholder="Full Name" />
         </div>
-    </div>
-    <div class="row">
         <div class="form-group">
-            <input type="password" class="form-control" ng-model='userDetails.password' placeholder="password"/>
+            <input type="text" class="form-control input-style" ng-model='userDetails.Mobile' placeholder="Email" />
         </div>
-    </div>
-
-    <div class="row">
-        <div class="form-group" >
-            <select class="form-control" ng-model="userDetails.aptno">
-                <option selected>Apprt Name</option>
-                <option value="123">123</option>
-                <option value="123">123</option>
-                <option value="123">123</option>
-            </select>
-        </div>
-    </div>
-    <div class="row">
         <div class="form-group">
-            <input type="text" class="form-control" ng-model='userDetails.email' placeholder="email id"/>
+            <select class="form-control input-style" ng-model="userDetails.aptno">
+            <option selected>Apprt Name</option>
+            <option value="123">123</option>
+            <option value="123">123</option>
+            <option value="123">123</option>
+        </select>
         </div>
+        <div class="form-group">
+            <input type="password" class="form-control input-style" ng-model='userDetails.Mobile' placeholder="Password" />
+        </div>
+        <button class="btn btn-success btn-lg" ng-click="submit(userDetails)">Signup</button>
     </div>
-
-    <br/>
-    <button class="btn btn-success btn-lg pull-left" ng-click="submit(userDetails)">Signup</button>
-    <button class="btn btn-danger btn-lg pull-right" ui-sref="test">cancel</button>
 </div>

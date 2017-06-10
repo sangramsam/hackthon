@@ -1,26 +1,26 @@
-app.service("signIn",function (Settings,$q,$http) {
-    function singIn(user) {
+app.service("signUp", function(Settings, $q, $http) {
+    function signUp(user) {
         var deferred = $q.defer();
         $http({
             method: 'POST',
-            url: Settings.BASE_URL+"apartment/user/signUp",
+            url: Settings.BASE_URL + "apartment/user/signUp",
             data: {
-                user_first_name:user.fname,
-                user_last_name:user.lname,
-                user_phone:user.Mobile,
-                user_email:user.email,
-                user_password:user.password,
-                apartment_id:user.aptno
+                user_first_name: user.fname,
+                user_last_name: user.lname,
+                user_phone: user.Mobile,
+                user_email: user.email,
+                user_password: user.password,
+                apartment_id: user.aptno
             },
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(function (response, status, headers, config) {
+        }).then(function(response, status, headers, config) {
             deferred.resolve({
                 status: status,
                 data: response.data
             });
-        }, function (response, status, headers, config) {
+        }, function(response, status, headers, config) {
             deferred.reject({
                 status: status,
                 data: response.data
@@ -28,7 +28,7 @@ app.service("signIn",function (Settings,$q,$http) {
         });
         return deferred.promise;
     };
-    return{
-        singIn:singIn
+    return {
+        singIn: singIn
     }
 });
