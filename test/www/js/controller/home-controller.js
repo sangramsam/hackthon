@@ -1,5 +1,3 @@
-app.controller('home', function($scope) {
-
-
-
+app.controller('homectrl', function($scope,auth) {
+    $scope.token=auth.getToken();
 });

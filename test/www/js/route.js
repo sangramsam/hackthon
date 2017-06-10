@@ -20,7 +20,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 url: "/home",
                 title: 'home',
                 templateUrl: 'view/home.html',
-                controller:'home'
+                controller:'homectrl'
             })
     $urlRouterProvider.otherwise("/test");
     });
