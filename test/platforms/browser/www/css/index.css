@@ -201,7 +201,7 @@ h2.hero-text {
     padding-left: 5px;
 }
 
-.form-group {
+.form-group:first-child {
     color: #333333;
     font-size: 14px;
 }

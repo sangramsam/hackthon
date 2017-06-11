@@ -13,7 +13,7 @@
         <div class="form-group">
             <label for="eventName">In club</label>
             <ul class="categoryList header-nav nav nav-pills">
-                <li ng-repeat="category in categories">
+                <li ng-repeat="category in categories" style="background-image:url({{category.category_img}})">
                     <p>{{category.category_name}}</p>
                 </li>
             </ul>
