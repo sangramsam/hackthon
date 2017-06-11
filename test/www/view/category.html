@@ -1,7 +1,7 @@
 <section class="category-wrapper container">
     <div class="row">
 
-        <div class="col-xs-6 row-padding" ng-repeat="category in categories" ng-click="redirectToEventListing (category.category_id)">
+        <div class="col-xs-6 row-padding" ng-repeat="category in categories" ui-sref="categoryList ({id:category.category_id})">
             <div class="card" style="background-image:url({{category.category_img}});background-size: cover;">
                 <p class="category-name">{{category.category_name}}</p>
             </div>
@@ -12,6 +12,7 @@
     <ul class="footer-home">
         <li class="active"><i class="fa fa-home imgheight"></i></li>
         <li ui-sref="myEventsCtrl"><i class="fa fa-bars imgheight" style=" text-rendering: auto;"></i></li>
+        <li ui-sref="createEvent"><i class="fa fa-plus-square-o" aria-hidden="true"></i></li>
     </ul>
 </div>
 </div>

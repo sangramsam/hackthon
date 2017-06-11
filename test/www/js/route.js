@@ -48,7 +48,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: 'view/my-events.html',
             controller: 'myEventsCtrl'
         })
-    $urlRouterProvider.otherwise("/test");
+    $urlRouterProvider.otherwise("/login");
 });
 app.run(['$rootScope', 'auth', '$state', function($rootScope, auth, $state) {
     console.log("called run");
