@@ -1,6 +1,6 @@
 <section class="event-details">
     <div class="hero-sec" style="background-image:url(http://192.168.2.14/apartment/assets/profile_imgs/fde9c60e94123cc1f146e3705a892c46.jpg);background-repeat:no-repeat;height: 200px; background-size: cover;position:relative;">
-        <p class="date-time"><span class="date">{{eventTime}}</span><span class="time">{{event.event_from_time}}</span></p>
+        <p class="date-time"><span class="date">21 june</span><span class="time-a">5pm</span></p>
     </div>
     <div class="container event-detail-wrap">
         <p class="eventName event-heading">{{event.event_name}}</p>
@@ -30,13 +30,13 @@
             <h3 class="event-heading">Discussion</h3>
             <div class="row">
                 <div class="col-xs-10">
-        <textarea placeholder="Write here" class="form-control" ng-model="comment"></textarea>
+                    <textarea placeholder="Write here" class="form-control" ng-model="comment"></textarea>
                 </div>
                 <div class="col-xs-2" ng-click="sendComment(comment,event.event_id)">
-                       <img src="https://s3.ap-south-1.amazonaws.com/sangram.xyz/paper-plane+(1).png" style="margin-top: 12px;"> 
+                    <img src="https://s3.ap-south-1.amazonaws.com/sangram.xyz/paper-plane+(1).png" style="margin-top: 12px;">
                 </div>
             </div>
-            
+
             <div class="comment-sec">
                 <div class="comment table-row" ng-repeat="comment in event.event_comments  ">
                     <img class="table-cell comment-user" src="{{comment.user_img}}" alt="">
