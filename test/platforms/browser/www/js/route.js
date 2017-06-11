@@ -32,18 +32,18 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             controller: 'createEvent'
         })
     $urlRouterProvider.otherwise("/test");
-    });
-app.run(['$rootScope','auth','$state', function ($rootScope, auth,$state) {
+});
+app.run(['$rootScope', 'auth', '$state', function($rootScope, auth, $state) {
     console.log("called run");
-    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
         //console.log(toState);
         // NOT authenticated - wants any private stuff
-        if(!auth.getToken())
-        {
-            //console.log("Denny")
-            $state.go('login')
-            event.preventDefault();
-            return;
-        }
+        // if(!auth.getToken())
+        // {
+        //     //console.log("Denny")
+        //     $state.go('login')
+        //     event.preventDefault();
+        //     return;
+        // }
     });
 }]);
