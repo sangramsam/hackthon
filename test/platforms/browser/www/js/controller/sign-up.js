@@ -1,3 +1,4 @@
+
 app.controller('signup', function($scope, $http, $state, signUp,auth) {
     signUp.getApartment().then(function(res) {
         console.log(res.data.data);

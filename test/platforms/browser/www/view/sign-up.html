@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="signup">
+        <h2 class="hero-text">New account,</h2>
+        <div class="form-group">
+            <input type="text" class="form-control input-style" ng-model='user.name' placeholder="Full Name" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control input-style" ng-model='user.email' placeholder="Email" />
+        </div>
+        <div class="form-group">
+            <select class="form-control input-style" ng-model="user.apartment">
+            <option ng-repeat="apartment in apartments" value="{{apartment.apartment_id}}" >{{apartment.apartment_name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control input-style" ng-model='user.password' placeholder="Password" />
+        </div>
+        <button class="btn btn-success btn-lg primary-btn" ng-click="submit(user)">Signup</button>
+    </div>
+</div>
