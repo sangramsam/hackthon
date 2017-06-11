@@ -1,4 +1,4 @@
-var app=angular.module('app', ['ui.router','ui.router.state.events']).config(['$compileProvider',
+var app=angular.module('app', ['ui.router','ui.router.state.events','ngFileUpload']).config(['$compileProvider',
   function($compileProvider) {
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file):/);
   }]).constant('Settings', {

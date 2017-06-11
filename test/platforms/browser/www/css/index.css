@@ -281,3 +281,6 @@ ul.categoryList>li>p {
 .isPaid.active {
     background-color: #7B4BE2;
 }
+.form-control.removePadding{
+    padding: 0px;
+}
