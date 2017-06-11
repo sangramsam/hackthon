@@ -9,7 +9,8 @@ $scope.PostEvent=function(event){
     var eventForm=moment(event.eventFrom).format('h:mm A');
     var eventTo=moment(event.eventTo).format('h:mm A')
 createEvent.createEvent(event,$scope.id,$scope.img,date,eventForm,eventTo).then(function(res){
-    alert("success");
+    //alert("success");
+    $state.go('category');
 })
 }
 $scope.Paidselect=false;

@@ -2,7 +2,7 @@ app.service("createEvent", function(Settings, $q, $http,auth) {
     function createEvent(event,id,img,date,from,to) {
         var deferred = $q.defer();
     
-        alert("post event called" +img);
+        //alert("post event called" +img);
         $http({
             method: 'POST',
             url: Settings.BASE_URL + "Dashboard/createEvent",
@@ -21,13 +21,13 @@ app.service("createEvent", function(Settings, $q, $http,auth) {
                 'User-Id':auth.getToken()
             }
         }).then(function(response, status, headers, config) {
-            alert("post event success" );
+            //alert("post event success" );
             deferred.resolve({
                 status: status,
                 data: response.data
             });
         }, function(response, status, headers, config) {
-               alert("post event failed"+response.data );
+               //alert("post event failed"+response.data );
             deferred.reject({
                 status: status,
                 data: response.data

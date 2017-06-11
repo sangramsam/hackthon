@@ -10,7 +10,7 @@
             <p>{{event.event_name}}</p>
         </div>
         <div class="destails">
-            <p class="time">{{event.event_date}}</p>
+            <p class="time">{{getdate(event.event_date)}} <br>{{getMonth(event.event_date)}}</p>
             <ul class="event-stats">
                 <li>
                     <p class="margin-bottom">Joined</p>
