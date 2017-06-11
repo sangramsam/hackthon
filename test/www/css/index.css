@@ -282,7 +282,7 @@ ul.categoryList>li>p {
     background-color: #7B4BE2;
 }
 
-.form-control.removePadding{
+.form-control.removePadding {
     padding: 0px;
 }
 
@@ -412,4 +412,22 @@ ul.participants>li>img {
 
 .margin-bottom {
     margin-bottom: 0px;
+}
+
+ul.footer-home {
+    text-align: left;
+    padding: 0;
+}
+
+ul.footer-home>li {
+    display: inline-block;
+    list-style: none;
+    font-size: 18px;
+    padding-right: 40px;
+    padding-right: 40px;
+    padding: 20px;
+}
+
+ul.footer-home>li.active {
+    border-bottom: 2px solid #7B4BE2;
 }

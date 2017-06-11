@@ -42,8 +42,13 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             title: 'eventDetails',
             templateUrl: 'view/event-details.html',
             controller: 'eventDetailsCtrl'
+        }).state('myEventsCtrl', {
+            url: "/myEvents",
+            title: 'eventDetails',
+            templateUrl: 'view/my-events.html',
+            controller: 'myEventsCtrl'
         })
-    $urlRouterProvider.otherwise("/test");
+    $urlRouterProvider.otherwise("/login");
 });
 app.run(['$rootScope', 'auth', '$state', function($rootScope, auth, $state) {
     console.log("called run");

@@ -1,1 +1,34 @@
-<h3>category {{id}}</h3>
+<section class="my-event-wrapper">
+    <div class="header">
+        <h3>Your events</h3>
+    </div>
+    <div ng-if="events.length===0" style="margin-top:60px;">
+        <h3>No events found :)</h3>
+    </div>
+    <div class="card-event" ng-repeat="event in events" ui-sref="eventDetailsCtrl({id:event.event_id})">
+        <div class="imageSec" style="background-image:url({{event.event_imgs}});background-repeat:no-repeat;">
+            <p>{{event.event_name}}</p>
+        </div>
+        <div class="destails">
+            <p class="time">{{event.event_date}}</p>
+            <ul class="event-stats">
+                <li>
+                    <p class="margin-bottom">Joined</p>
+                    <p class="margin-bottom">{{event.joined_sers}}</p>
+                </li>
+                <li>
+                    <p class="margin-bottom">Fee</p>
+                    <p class="margin-bottom">&#8377;{{event.event_amount}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="footer">
+    <ul class="footer-home">
+        <li class="active" ui-sref="category"><i class="fa fa-home imgheight"></i></li>
+        <li ui-sref="myEventsCtrl"><i class="fa fa-bars imgheight" style=" text-rendering: auto;"></i></li>
+        <li ui-sref="createEvent"><i class="fa fa-plus-square-o" aria-hidden="true"></i></li>
+    </ul>
+</div>

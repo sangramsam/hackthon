@@ -2,10 +2,7 @@
     <div class="header">
         <h3>Your events</h3>
     </div>
-    <div ng-if="events.length===0" style="margin-top:60px;">
-        <h3>No events found :)</h3>
-    </div>
-    <div class="card-event" ng-repeat="event in events" ui-sref="eventDetailsCtrl({id:event.event_id})">
+    <div class="card-event" ng-repeat="event in myEvents" ui-sref="eventDetailsCtrl({id:event.event_id})">
         <div class="imageSec" style="background-image:url({{event.event_imgs}});background-repeat:no-repeat;">
             <p>{{event.event_name}}</p>
         </div>
