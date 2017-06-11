@@ -25,7 +25,13 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             title: 'Category',
             templateUrl: 'view/category.html',
             controller: 'categoryctrl'
-        }).state('createEvent', {
+        }).state('categoryList', {
+            url: "/categoryList/:id",
+            title: 'categoryList',
+            templateUrl: 'view/categoryList.html',
+            controller: 'categoryList'
+        })
+        .state('createEvent', {
             url: "/createEvent",
             title: 'createEvent',
             templateUrl: 'view/createEvent.html',

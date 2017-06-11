@@ -1,10 +1,16 @@
 <section class="category-wrapper container">
     <div class="row">
 
-        <div class="col-xs-6 row-padding" ng-repeat="category in categories" ng-click="redirectToEventListing (category.category_id)">
+        <div class="col-xs-6 row-padding" ng-repeat="category in categories" ui-sref="categoryList({id:category.category_id})">
             <div class="card">
                 <p class="category-name">{{category.category_name}}</p>
             </div>
         </div>
     </div>
 </section>
+<div class="footer">
+    <div class="row">
+        <div class="col-xs-3"><i class="fa fa-home imgheight"></i></div>
+        <div class="col-xs-3"><i class="fa fa-bars imgheight"  style=" text-rendering: auto;" ></div>
+    </div>
+</div>
