@@ -1,4 +1,6 @@
-app.controller('homectrl', function($scope, $state, auth) {
+app.controller('homectrl', function($scope, auth, $state) {
     $scope.token = auth.getToken();
-    $state.go('category');
+    if (!auth.getToken()) {
+        $state.go('login')
+    }
 });

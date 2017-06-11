@@ -25,6 +25,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             title: 'Category',
             templateUrl: 'view/category.html',
             controller: 'categoryctrl'
+        }).state('createEvent', {
+            url: "/createEvent",
+            title: 'createEvent',
+            templateUrl: 'view/createEvent.html',
+            controller: 'createEvent'
         })
     $urlRouterProvider.otherwise("/test");
 });
