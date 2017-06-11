@@ -1,0 +1,10 @@
+<section class="category-wrapper container">
+    <div class="row">
+
+        <div class="col-xs-6 row-padding" ng-repeat="category in categories" ng-click="redirectToEventListing (category.category_id)">
+            <div class="card">
+                <p class="category-name">{{category.category_name}}</p>
+            </div>
+        </div>
+    </div>
+</section>
