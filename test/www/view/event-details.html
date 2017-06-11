@@ -1,0 +1,46 @@
+<section class="event-details">
+    <div class="hero-sec" style="background-image:url(http://192.168.2.14/apartment/assets/profile_imgs/fde9c60e94123cc1f146e3705a892c46.jpg);background-repeat:no-repeat;height: 200px; background-size: cover;position:relative;">
+        <p class="date-time"><span class="date">21 june</span><span class="time">5pm</span></p>
+    </div>
+    <div class="container event-detail-wrap">
+        <p class="eventName event-heading">{{event.event_name}}</p>
+        <div class="row">
+            <div class="col-xs-6">
+                <p class="event-address">In {{event.event_address}}</p>
+            </div>
+            <div class="col-xs-6">
+                <p class="amount text-right">₹{{event.event_amount}}</p>
+                <p class="muted text-right">Pay at venue</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="participants-wrap">
+            <h3 class="event-heading">Who all are going</h3>
+            <ul class="participants">
+                <li ng-repeat="user in event.joined_persons">
+                    <img ng-src="{{user.user_img}}" alt="user icon" width="100px;" height="100px;">
+                </li>
+            </ul>
+        </div>
+        <div class="about-event">
+            <h3 class="event-heading">More about the event</h3>
+            <p>{{event.message}}</p>
+        </div>
+        <div class="discussion-wrap">
+            <h3 class="event-heading">Discussion</h3>
+            <textarea placeholder="Write here" class="form-control"></textarea>
+            <div class="comment-sec">
+                <div class="comment table-row" ng-repeat="comment in event.event_comments">
+                    <img class="table-cell comment-user" src="{{comment.user_img}}" alt="">
+                    <div class="table-cell comment-cont full-width">
+                        <h4>{{comment.user_name}}<span class="muted float-right">{{comment.comment_date}}</span></h4>
+                        <p>{{comment.event_comment}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="join-sec">
+        <p class="join margin-bottom">Going</p>
+    </div>
+</section>

@@ -37,6 +37,12 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: 'view/createEvent.html',
             controller: 'createEvent'
         })
+        .state('eventDetailsCtrl', {
+            url: "/eventDetails",
+            title: 'eventDetails',
+            templateUrl: 'view/event-details.html',
+            controller: 'eventDetailsCtrl'
+        })
     $urlRouterProvider.otherwise("/test");
 });
 app.run(['$rootScope', 'auth', '$state', function($rootScope, auth, $state) {
