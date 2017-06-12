@@ -48,4 +48,13 @@ $scope.uploadFiles = function(files, errFiles) {
    };
 }
     }
+
+  $scope.paidShow=false;
+    $scope.paidToggle=function(){
+        if($scope.paidShow==true){
+            $scope.paidShow=false;
+        }else{
+            $scope.paidShow=true;
+        }
+    }
 });

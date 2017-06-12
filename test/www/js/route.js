@@ -38,7 +38,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             controller: 'createEvent'
         })
         .state('eventDetailsCtrl', {
-            url: "/eventDetails",
+            url: "/eventDetails/:id",
             title: 'eventDetails',
             templateUrl: 'view/event-details.html',
             controller: 'eventDetailsCtrl'

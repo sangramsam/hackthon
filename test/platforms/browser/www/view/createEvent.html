@@ -32,14 +32,14 @@
                 </div>
             </div>
         </div>
-        <div class="form-group clearfix" ng-click="paid()">
+        <div class="form-group clearfix" ng-click="paid();paidToggle()">
             <label ><span class="isPaid"  ng-class="{active:Paidselect==true}"></span> Paid event</label>
         </div>
-        <div class="form-group clearfix row">
+        <div class="form-group clearfix row" ng-show="paidShow==true">
             <div class="col-xs-6">
                 <input type="number" id="eventPrice" class="form-control" ng-model='event.eventPrice' placeholder="Amount" />
             </div>
-            <div class="col-xs-6" style="padding:0;">
+            <div class="col-xs-6" style="padding:0;" ng-show="paidShow==true">
                 <p>Amount to be collected from the venue of the event</p>
             </div>
         </div>

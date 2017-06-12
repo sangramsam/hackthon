@@ -4,7 +4,7 @@ app.service("eventDetails", function(Settings, $q, $http, auth) {
         $http({
             method: 'POST',
             url: Settings.BASE_URL + "/Dashboard/getEventDetails",
-            data: { event_id: 5 },
+            data: { event_id: eventId },
             headers: {
                 'Content-Type': 'application/json',
                 'User-Id': auth.getToken()

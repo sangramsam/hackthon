@@ -1,5 +1,5 @@
-app.controller('eventDetailsCtrl', function($scope, Login, $state, auth, eventDetails, createEvent) {
-    eventDetails.getEvent().then(function(res) {
+app.controller('eventDetailsCtrl', function($scope, Login, $state, auth, eventDetails, createEvent,$stateParams) {
+    eventDetails.getEvent($stateParams.id).then(function(res) {
         $scope.event = res.data.data;
         $scope.eventTime = moment(new Date($scope.event.event_date)).format('D MMM');
     });
@@ -7,13 +7,14 @@ app.controller('eventDetailsCtrl', function($scope, Login, $state, auth, eventDe
     $scope.sendComment = function(comment, event_id) {
         createEvent.comment(comment, event_id).then(function(response) {
             $scope.comment = '';
-            eventDetails.getEvent().then(function(res) {
+            eventDetails.getEvent($stateParams.id).then(function(res) {
                 $scope.event = res.data.data;
             });
         })
     }
     $scope.going = function(id) {
         eventDetails.Going(id).then(function(res) {
+            alert("success");
             $state.go('category');
         })
     }
